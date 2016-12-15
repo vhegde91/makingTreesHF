@@ -1,0 +1,10 @@
+#!/bin/bash
+crab submit -c crabConfig25ns_MC_300to470.py
+crab submit -c crabConfig25ns_MC_470to600.py
+crab submit -c crabConfig25ns_MC_600to800.py
+crab submit -c crabConfig25ns_MC_800to1000.py
+crab submit -c crabConfig25ns_MC_1000to1400.py
+crab submit -c crabConfig25ns_MC_1400to1800.py
+crab submit -c crabConfig25ns_MC_1800to2400.py
+crab submit -c crabConfig25ns_MC_2400to3200.py
+crab submit -c crabConfig25ns_MC_3200toInf.py

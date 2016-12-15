@@ -1,0 +1,31 @@
+from CRABClient.UserUtilities import config, getUsernameFromSiteDB
+config = config()
+
+config.General.requestName = 'HFMC_Spring16_Flat'
+config.General.workArea = 'crab25nsMC_Spring16_Flat'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+
+config.JobType.pluginName = 'Analysis'
+config.JobType.psetName = 'noiseAnalysis_CollisionData_RECO_cfg.py'
+
+config.Data.inputDataset = '/QCD_Pt-15to7000_TuneCUETP8M1_Flat_13TeV_pythia8/RunIISpring16DR80-PUSpring16_RECO_NZS_80X_mcRun2_asymptotic_2016_v3-v1/GEN-SIM-RECO'
+#config.Data.inputDataset = '/QCD_Pt_170to300_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'
+#config.Data.inputDataset = '/QCD_Pt_300to470_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                      
+#config.Data.inputDataset = '/QCD_Pt_470to600_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                       
+#config.Data.inputDataset = '/QCD_Pt_600to800_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'
+#config.Data.inputDataset = '/QCD_Pt_800to1000_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                      
+#config.Data.inputDataset = '/QCD_Pt_1000to1400_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                    
+#config.Data.inputDataset = '/QCD_Pt_1400to1800_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                     
+#config.Data.inputDataset = '/QCD_Pt_1800to2400_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                     
+#config.Data.inputDataset = '/QCD_Pt_2400to3200_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                     
+#config.Data.inputDataset ='/QCD_Pt_3200toInf_TuneCUETP8M1_13TeV_pythia8/RunIISpring15DR74-Asympt25nsRecodebug_MCRUN2_74_V9-v1/GEN-SIM-RECODEBUG'                       
+set Data.allowNonValidInputDataset = True
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.unitsPerJob = 50
+config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
+config.Data.publication = False
+config.Data.outputDatasetTag = 'CRAB3_HFTree25nsMC_Spring16_Flat'
+
+config.Site.storageSite = 'T2_IN_TIFR'
